@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const { MongoClient } = require('mongodb');
+const cors = require('cors');
 // or as an es module:
 // import { MongoClient } from 'mongodb'
 
@@ -11,7 +12,9 @@ const client = new MongoClient(url);
 
 // Database Name
 const dbName = 'quoteDatabase';
-
+app.use(cors({
+  origin: '*'
+}));
 app.get('/', async (req, res) => {
   // Use connect method to connect to the server
   await client.connect();
