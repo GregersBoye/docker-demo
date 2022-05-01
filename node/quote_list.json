@@ -1,0 +1,62 @@
+[
+	{
+		"author": "Martin Fowler",
+		"quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
+	},
+	{
+		"author": "Oscar Wilde",
+		"quote": "Experience is the name everyone gives to their mistakes."
+	},
+	{
+		"author": "Coco Chanel",
+		"quote": " In order to be irreplaceable, one must always be different"
+	},
+	{
+		"author": "Chris Heilmann",
+		"quote": "Java is to JavaScript what car is to Carpet."
+	},
+	{
+		"author": "Francis Bacon",
+		"quote": "Knowledge is power."
+	},
+	{
+		"author": "Dan Salomon",
+		"quote": "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday’s code."
+	},
+	{
+		"author": "Antoine de Saint-Exupery",
+		"quote": "Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away."
+	},
+	{
+		"author": "Nikita Popov",
+		"quote": "Ruby is rubbish! PHP is phpantastic!"
+	},
+	{
+		"author": "Cory House",
+		"quote": "Code is like humor. When you have to explain it, it’s bad."
+	},
+	{
+		"author": "Steve Maguire",
+		"quote": "Fix the cause, not the symptom."
+	},
+	{
+		"author": "Kent Beck",
+		"quote": "Optimism is an occupational hazard of programming: feedback is the treatment."
+	},
+	{
+		"author": "Martin Fowler",
+		"quote": "When to use iterative development? You should use iterative development only on projects that you want to succeed."
+	},
+	{
+		"author": "Austin Freeman",
+		"quote": "Simplicity is the soul of efficiency."
+	},
+	{
+		"author": "Ralph Johnson",
+		"quote": "Before software can be reusable it first has to be usable."
+	},
+	{
+		"author": "Kent Beck",
+		"quote": "Make it work, make it right, make it fast."
+	}
+]
