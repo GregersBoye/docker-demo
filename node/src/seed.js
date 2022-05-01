@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const quoteList = require('../quote_list.json');
 const { MongoClient } = require('mongodb');
 // or as an es module:
 // import { MongoClient } from 'mongodb'
@@ -12,21 +13,17 @@ const client = new MongoClient(url);
 // Database Name
 const dbName = 'quoteDatabase';
 
-app.get('/', async (req, res) => {
+  async function seed(){
   // Use connect method to connect to the server
   await client.connect();
   console.log('Connected successfully to server');
   const db = client.db(dbName);
   const collection = db.collection('documents');
-  const quoteList = await collection.find({}).toArray();
-  console.log('Found documents =>', quoteList.length);
-  // the following code examples can be pasted here...
 
-  const quote = quoteList[Math.floor(Math.random()*quoteList.length)]
-  res.send(quote);
-})
+    const insertResult = await collection.insertMany(quoteList);
+    console.log('Inserted documents =>', insertResult);
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
- console.log('Paw patrol ready for action Ryder, SIR!');
-})
+  return 'done.';
+}
+
+seed();
