@@ -22,8 +22,7 @@ const dbName = 'quoteDatabase';
 
     const insertResult = await collection.insertMany(quoteList);
     console.log('Inserted documents =>', insertResult);
-
-  return 'done.';
+    process.exit(0);
 }
 
 seed();
