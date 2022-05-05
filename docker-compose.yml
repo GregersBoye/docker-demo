@@ -4,3 +4,9 @@ services:
     image: "mongo:latest"
     ports:
       - "27017:27017"
+  web:
+    image: nginx
+    volumes:
+      - ./frontend/build:/usr/share/nginx/html
+    ports:
+      - "8080:80"
