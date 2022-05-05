@@ -6,8 +6,8 @@ const cors = require('cors');
 // or as an es module:
 // import { MongoClient } from 'mongodb'
 
-// Connection URL
-const url = 'mongodb://localhost:27017';
+// Connection URL/:
+const url = 'mongodb://mongo:27017';
 const client = new MongoClient(url);
 
 // Database Name

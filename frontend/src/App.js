@@ -7,7 +7,7 @@ function App() {
   async function getData(){
     setAnimate(true);
     setTimeout(() => {setQuote(data); setAnimate(false); }, 1000)
-    const quote = await fetch('http://localhost:3001');
+    const quote = await fetch('http://api:3001');
     const data = await quote.json();
     console.log('getting data');
     console.log(data);

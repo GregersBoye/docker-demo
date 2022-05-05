@@ -10,3 +10,9 @@ services:
       - ./frontend/build:/usr/share/nginx/html
     ports:
       - "8080:80"
+  api:
+    build:
+      context: .
+      dockerfile: docker/api/Dockerfile
+    ports:
+      - "3001:3001"
