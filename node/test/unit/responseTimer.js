@@ -50,11 +50,11 @@ describe('responseTimer', function(){
 
       expect(timer.response).to.equal(20)
     });
-    // it('sets the response time', function(){
-    //   var timer = new ResponseTimer();
-    //   timer.setResponse();
-    //   // expect(timer.response).not.to.equal(null);
-    // })
+    it('sets the response time', function(){
+      var timer = new ResponseTimer();
+      timer.setResponse();
+      expect(timer.response).not.to.equal(null);
+    })
   })
 
   describe('connectTime',function(){

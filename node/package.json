@@ -6,6 +6,8 @@
   "scripts": {
     "test": "mocha --recursive --reporter spec",
     "coverage": "nyc mocha --recursive --reporter progress",
+	"lint": "npx eslint ./src/",
+	"lint-fix": "npx esLint ./src/ --fix",
     "start": "node src/index.js",
     "seed": "node src/seed.js",
     "start-dev": "nodemon src/index.js"
