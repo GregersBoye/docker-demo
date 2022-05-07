@@ -4,7 +4,8 @@
   "description": "some stuff",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --recursive --reporter spec",
+    "coverage": "nyc mocha --recursive --reporter progress",
     "start": "node src/index.js",
     "seed": "node src/seed.js",
     "start-dev": "nodemon src/index.js"
@@ -17,6 +18,12 @@
     "mongodb": "^4.5.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "chai": "^4.3.6",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.16",
+    "nyc": "^15.1.0"
   }
 }
