@@ -14,5 +14,7 @@ services:
     build:
       context: .
       dockerfile: docker/api/Dockerfile
+    volumes:
+      - ./node/src/:/usr/src/app/src
     ports:
       - "3001:3001"
