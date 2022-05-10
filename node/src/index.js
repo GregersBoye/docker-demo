@@ -5,6 +5,7 @@ const port = 3001;
 const { MongoClient } = require('mongodb');
 const cors = require('cors');
 const ResponseTimer = require('./models/responseTimer');
+const logger = require('./logger');
 // or as an es module:
 // import { MongoClient } from 'mongodb'
 
@@ -21,21 +22,22 @@ app.get('/', async (req, res) => {
   // Use connect method to connect to the server
   await client.connect();
   timer.setConnection();
-  console.log('connectec to server after ', timer.connectTime);
+  logger.info(`connectec to server after ${timer.connectTime}ms`);
   const db = client.db(dbName);
   const collection = db.collection('documents');
   const quoteList = await collection.find({}).toArray();
   timer.setDocuments();
-  console.log('Fetched documents after ', timer.documentTime);
-  console.log('Found documents =>', quoteList.length);
+  logger.info(`Fetched documents after ${timer.documentTime}`);
+  logger.info(`Found documents: ${quoteList.length}ms`);
   // the following code examples can be pasted here...
 
   const quote = quoteList[Math.floor(Math.random() * quoteList.length)];
   timer.setResponse();
-  console.log('Sending response after ', timer.responseTime);
+  logger.info(`Sending response after ${timer.responseTime} ms`);
   res.send(quote);
+  logger.info(quote.author);
 });
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-  console.log('Paw patrol ready for action Ryder, SIR!');
+  logger.info(`Example app listening on port ${port}`);
+  logger.info('Paw patrol ready for action Ryder, SIR!');
 });

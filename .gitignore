@@ -2,3 +2,4 @@
 node/.nyc_output
 node/coverage
 node/node_modules
+*.log
