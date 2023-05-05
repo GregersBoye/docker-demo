@@ -5,7 +5,7 @@ const quoteList = require('../quote_list.json');
 
 const logger = require('./logger.js');
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb://mongo:27017';
 const client = new MongoClient(url);
 
 // Database Name
